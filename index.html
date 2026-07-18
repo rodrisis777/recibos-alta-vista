@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recibos Alta Vista #254</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="panel">
+      <h1>Recibo mensual — Alta Vista #254</h1>
+      <p class="subtitle">Llena los datos y descarga el PDF.</p>
+
+      <label for="cuota">Número de cuota</label>
+      <input id="cuota" type="number" min="1" max="240" value="1">
+
+      <label for="mesPago">Mes que se está pagando</label>
+      <select id="mesPago">
+        <option>enero</option>
+        <option>febrero</option>
+        <option>marzo</option>
+        <option>abril</option>
+        <option>mayo</option>
+        <option>junio</option>
+        <option>julio</option>
+        <option>agosto</option>
+        <option>septiembre</option>
+        <option>octubre</option>
+        <option>noviembre</option>
+        <option>diciembre</option>
+      </select>
+
+      <label for="fecha">Fecha del recibo</label>
+      <input id="fecha" type="date">
+
+      <label for="monto1">Monto — Miguel Antonio</label>
+      <input id="monto1" type="number" step="0.01" value="108.38">
+
+      <label for="monto2">Monto — José Pedro</label>
+      <input id="monto2" type="number" step="0.01" value="115.45">
+
+      <label for="img1">Captura 1 (notificación banco origen)</label>
+      <div class="file-drop" id="drop1">Clic para subir imagen</div>
+      <input type="file" id="img1" accept="image/*" style="display:none">
+
+      <label for="img2">Captura 2 (comprobante banco destino)</label>
+      <div class="file-drop" id="drop2">Clic para subir imagen</div>
+      <input type="file" id="img2" accept="image/*" style="display:none">
+
+      <button id="downloadBtn">Descargar PDF</button>
+    </div>
+
+    <div class="panel preview-panel">
+      <div id="receipt">
+        <h2>RECIBO DE PAGO – CUOTAS DE VIVIENDA</h2>
+        <p id="pFecha">En la ciudad de San Salvador, a 05 de junio de 2026.</p>
+        <p id="pPrincipal">Aquí se va a armar el párrafo principal.</p>
+        <p>Se deja constancia que el monto recibido ha sido distribuido de la siguiente manera:</p>
+        <ul>
+          <li><b>Miguel Antonio Menjívar Servellón</b>: <span id="l1"></span></li>
+          <li><b>José Pedro Morales Alas</b>: <span id="l2"></span></li>
+        </ul>
+        <hr>
+        <p>Para los usos legales que correspondan, se extiende el presente recibo.</p>
+        <div class="imgs" id="imgsContainer">
+          <div class="placeholder-imgs">
+            <div>Captura 1</div>
+            <div>Captura 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

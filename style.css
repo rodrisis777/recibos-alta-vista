@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f4f5f7;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2430;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 860px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e4e9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 14px 0 5px;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input, select {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e4e9;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fafafa;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2f6f4e;
+  background: #fff;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2f6f4e;
+  color: white;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #275c40;
+}
+
+.preview-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+#receipt {
+  background: white;
+  padding: 50px 45px;
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #111;
+  min-height: 400px;
+}
+
+#receipt h2 {
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+#receipt p {
+  margin: 0 0 12px;
+}
+
+#receipt ul {
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+
+#receipt li {
+  margin-bottom: 4px;
+}
+
+#receipt hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 4px 0 16px;
+}
+
+.file-drop {
+  border: 1.5px dashed #e2e4e9;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  font-size: 12.5px;
+  color: #6b7280;
+  cursor: pointer;
+  background: #fafafa;
+}
+
+.file-drop.has-img {
+  border-color: #2f6f4e;
+  color: #2f6f4e;
+}
+
+.imgs {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.imgs img {
+  height: 300px;
+  max-width: 48%;
+  object-fit: contain;
+  border: 1px solid #eee;
+}
+
+.placeholder-imgs {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+}
+
+.placeholder-imgs div {
+  flex: 1;
+  height: 200px;
+  border: 1.5px dashed #e2e4e9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 12px;
+}
